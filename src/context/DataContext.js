@@ -58,7 +58,6 @@ export default function DataProvider({children}) {
                 title: 'Error!',
                 text: 'Usuario inexistente!',
             })
-            navigate('/')
         // El usuario existe pero puso la contraseña incorrectamente
         }else if(usuarioExiste.data === -2){
             Swal.fire({
