@@ -34,7 +34,7 @@ export default function DataProvider({children}) {
                 title:'Exitoso!',
                 text:"Usuario creado correctamente!"
             })
-            navigate('/main')
+            navigate('/inicio')
         // El usuario existe pero puso la contraseña incorrectamente
         }else{
             Swal.fire({
@@ -58,7 +58,7 @@ export default function DataProvider({children}) {
                 title: 'Error!',
                 text: 'Usuario inexistente!',
             })
-            navigate('/main')
+            navigate('/')
         // El usuario existe pero puso la contraseña incorrectamente
         }else if(usuarioExiste.data === -2){
             Swal.fire({
@@ -69,7 +69,7 @@ export default function DataProvider({children}) {
         }else{
             console.log("Usuario autenticado!")
             setUser(usuarioExiste.data)
-            navigate('/main')
+            navigate('/inicio')
         }
     }
 
